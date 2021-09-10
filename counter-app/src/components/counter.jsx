@@ -1,26 +1,15 @@
-"use strict";
 import React, { Component, createContext } from "react";
 class Counter extends React.Component {
   state = {
-    count: 0,
-    tags: ["tag1", "tag2"],
+    count: this.props.value,
   };
 
   styles = {
     fontSize: "30px",
     fontWeight: "bold",
   };
-  renderTags() {
-    if (this.state.tags.length === 0) return <p>There are no tags</p>;
-    return (
-      <ul>
-        {this.state.tags.map((tag) => (
-          <li key={tag}> {tag} </li>
-        ))}
-      </ul>
-    );
-  }
   constructor() {
+    let countVal = this.props.count;
     super();
     this.handleIncrement = this.handleIncrement.bind(this);
   }
@@ -28,16 +17,15 @@ class Counter extends React.Component {
     this.setState({ count: this.state.count + 1 });
   }
   render() {
+    console.log("props : ", this.props.value);
     return (
       <div>
-        {this.state.tags.length === 0 && "Please create a new tag"}
         <span style={this.styles} className={this.getBadgeClasses()}>
           {this.formatCount()}
         </span>
         <button onClick={this.handleIncrement} className="btn btn-secondary">
           Increment
         </button>
-        {this.renderTags()}
       </div>
     );
   }
