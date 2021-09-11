@@ -1,17 +1,81 @@
 @import "../../global.scss";
 .topbar {
   width: 100%;
-  height: 70px;
+  height: 71px;
   background-color: white;
   color: $mainColor;
   position: fixed;
   top: 0;
   z-index: 2;
+  transition: all 1s ease;
 
   .wrapper {
-    padding: 10px 30px;
+    padding: 5px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+      .logo {
+        font-size: 50px;
+        font-weight: 700;
+        text-decoration: none;
+        color: inherit;
+        margin-right: 40px;
+      }
+      .itemContainer {
+        display: flex;
+        margin-left: 30px;
+        align-items: center;
+
+        .icon {
+          font-size: 30px;
+          margin-right: 5px;
+        }
+        span {
+          font-weight: 400;
+        }
+      }
+    }
+    .right {
+      .hamburger {
+        width: 32px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        span {
+          width: 100%;
+          height: 3px;
+          font-weight: 200;
+          background-color: $mainColor;
+          transform-origin: left;
+          transition: all 1s ease;
+        }
+      }
+    }
+  }
+  &.active {
+    background-color: $mainColor;
+    color: white;
+
+    .hamburger {
+      span {
+        &:first-child {
+          background-color: white;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          background-color: white;
+          transform: rotate(-45deg);
+        }
+      }
+    }
   }
 }
