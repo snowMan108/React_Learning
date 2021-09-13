@@ -7,7 +7,7 @@ export default function Intro() {
   useEffect(() => {
     init(textRef.current, {
       showCursor: true,
-      strings: ["Developer", "Designer", "Content Creator"],
+      strings: ["Developer", "Engineer", "Fighter pilot"],
       typeSpeed: 150,
       backSpeed: 75,
       backDelay: 1000,
@@ -17,7 +17,7 @@ export default function Intro() {
     <div className="intro" id="intro">
       <div className="left">
         <div className="imageContainer">
-          <img src="assets/man.png" />
+          <img src="assets/troll.png" />
         </div>
       </div>
       <div className="right">
@@ -25,7 +25,7 @@ export default function Intro() {
           <h2>Hi there, I'm</h2>
           <h1>Manuvikash</h1>
           <h3>
-            Freelance <span ref={textRef}></span>
+            <span ref={textRef}></span>
           </h3>
         </div>
         <a href="#portfolio">
