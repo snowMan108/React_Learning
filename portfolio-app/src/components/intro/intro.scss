@@ -1,5 +1,5 @@
 .intro {
-  background-color: rgb(25, 75, 109);
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-wrap: wrap;
   .left {
@@ -29,7 +29,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      color: rgb(17, 231, 70);
 
       h1 {
         font-size: 60px;
