@@ -13,18 +13,6 @@
     padding: 0;
     list-style: none;
     display: flex;
-
-    li {
-      font-size: 14px;
-      margin-right: 50px;
-      padding: 7px;
-      border-radius: 10px;
-      cursor: pointer;
-      &.active {
-        background-color: $mainColor;
-        color: white;
-      }
-    }
   }
   .container {
     width: 70%;
@@ -34,6 +22,7 @@
     flex-wrap: wrap;
 
     .item {
+      flex: 0 1 25%;
       width: 220px;
       height: 150px;
       border-radius: 20px;
@@ -49,7 +38,7 @@
       h3 {
         position: absolute;
         font-size: 20px;
-        margin: 60px 50px;
+        margin: 60px 100px;
       }
 
       img {
